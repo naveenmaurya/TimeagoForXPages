@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>ccTimeago</component-type>
+    <composite-name>ccTimeago</composite-name>
+    <composite-file>/ccTimeago.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt;&#xd;
+&lt;table border="0" cellpadding="3" cellspacing="0" width="450"&gt;&lt;tr&gt;&lt;td&gt;&#xd;
+&lt;b&gt;Timeago&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;&#xd;
+This control is required to import necessary libraries. It does not output anything. To use timeago set &lt;font face="Courier New"&gt;class="timeago"&lt;/font&gt; and &lt;font face="Courier New"&gt;title&lt;/font&gt; attribute to the date-time value in ISO 8601 format, for e.g. &lt;font face="Courier New"&gt;2013-03-17T09:24:17Z&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;&#xd;
+&lt;font face="Courier New"&gt;&amp;lt;abbr class=&amp;quot;timeago&amp;quot; title=&amp;quot;2013-03-17T09:24:17Z&amp;quot;&amp;gt;&amp;lt;/abbr&amp;gt;&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;&#xd;
+To convert date-time objects to ISO 8601 format there is a helper function provided &lt;font face="Courier New"&gt;getISO8601String(date_time_object)&lt;/font&gt;. You can pass either &lt;font face="Courier New"&gt;NotesDateTime&lt;/font&gt; or &lt;font face="Courier New"&gt;java.util.Date&lt;/font&gt; object to it.&lt;br /&gt;&lt;br /&gt;&#xd;
+&lt;font face="Courier New"&gt;&amp;lt;xp:text escape=&amp;quot;true&amp;quot; id=&amp;quot;computedField1&amp;quot; styleClass=&amp;quot;timeago&amp;quot;&lt;br/&gt;&#xd;
+title=&amp;quot;#{javascript:getISO8601String(@Date(2013, 3, 26, 10, 10, 10))}&amp;quot;&amp;gt;&lt;br/&gt;&amp;lt;/xp:text&amp;gt;&lt;/font&gt;&#xd;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
+      </designer-extension>
+    </composite-extension>
+  </composite-component>
+</faces-config>

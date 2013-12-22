@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xc:ccTimeago></xc:ccTimeago>Using&#160;
+	&lt;abbr&gt; tag: 
+	<xp:br></xp:br>
+	<abbr class="timeago" title="2013-03-17T09:24:17Z"></abbr>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	Computed field with NotesDateTime:
+	<xp:br></xp:br>
+	<xp:text escape="true" id="computedField1" styleClass="timeago">
+		<xp:this.title><![CDATA[#{javascript:var doc:NotesDocument = database.createDocument();
+getISO8601String(doc.getCreated());
+//getISO8601String(@Date(2013, 3, 26, 10, 10, 10))}]]></xp:this.title>
+	</xp:text>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	Computed field with java.util.Date:
+	<xp:br></xp:br>
+	<xp:text escape="true" id="computedField2" styleClass="timeago" title="#{javascript:getISO8601String(@Date(2013, 3, 26, 10, 10, 10))}"
+		style="font-weight:bold;color:rgb(0,0,255)">
+	</xp:text>
+</xp:view>
